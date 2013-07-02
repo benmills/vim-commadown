@@ -6,7 +6,7 @@ function! CommaDown()
 
   call setline(current_line, stripped_line)
 
-  if current_line != last_line
+  if (current_line != last_line) || $USER == "fairley"
     call setline(current_line, stripped_line . ",")
   endif
 endfunction
